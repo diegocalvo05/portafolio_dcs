@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: 'Junio 2025',
+    title: 'Desarrollo de Aplicación Web',
+    description: 'Se desarrolló en equipo una aplicación web dedicada a la publicación, gestión y renta de vehículos por día en donde los usuarios pueden registrarse y hacer uso de las funcionalidades de la aplicación como arrendatario o como arrendador.',
+  }, 
+  {
+    date: 'Junio 2024',
+    title: 'Desarrollo de Aplicación Móvil',
+    description: 'Se desarrolló en equipo una aplicación móvil para dispositivos android dedicada a la gestión financiera de los usuarios, permitiéndoles registrar sus tarjetas y monitorear sus gastos e ingresos.',
+  }, 
+  {
+    date: 'Enero 2024',
+    title: 'Desarrollo de Aplicación Web para Gestión de Bienes Raíces',
+    description: 'Proyecto desarrollado en conjunto con un compañero de la universidad. Durante el proceso gestioné tiempo y recursos de manera eficiente, manteniendo una comunicación constante para asegurar un trabajo en equipo fluido. Implementé una arquitectura de software dedicada para la necesidad del cliente. Trabajé el Backend de la aplicación web implementando una REST API con ExpressJS, además trabajé en el Frontend implementando la API creada para el proyecto, utilizando buenas prácticas y conceptos SOLID para el desarrollo del proyecto.',
+    link: 'https://www.ethelsalazar-realhome.com/'
+  }
+]
+---
+
+
+<ol class="relative border-s ml-3">  
+  {
+    EXPERIENCE.map(ex => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...ex }/>
+      </li>
+    ))
+  }                
+</ol>
+

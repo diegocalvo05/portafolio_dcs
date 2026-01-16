@@ -1,0 +1,68 @@
+---
+import Badge from '../components/Badge.astro';
+import Experience from '../components/Experience.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Welcome from '../components/Welcome.astro';
+import Briefcase from '../icons/Briefcase.astro';
+import Code from '../icons/Code.astro';
+import Email from '../icons/Email.astro';
+import GitHub from '../icons/GitHub.astro';
+import Linkedin from '../icons/Linkedin.astro';
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<main class="px-4">
+    <section class="w-full mx-auto lg:w-[740px] py-44 pb-24">
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        Hey, soy Diego Calvo 
+        <a 
+          href="https://www.linkedin.com/in/diego-calvo-solis"
+          target="blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        Estudiante de último año de Ingeniería Informática. <span class="text-yellow-200/90">Desarrollador Web Fullstack.</span> 
+        <span class="text-blue-200/90">De San Salvador, EL Salvador.</span><span class="opacity-85">Especializado en crear aplicaciones únicas.</span>
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap"> 
+        <SocialPill href="https://www.linkedin.com/in/diego-calvo-solis">
+          <Linkedin class="size-4 md:size-6"/>
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/diegocalvo05">
+          <GitHub class="size-4 md:size-6"/>
+          GitHub
+        </SocialPill>
+        <SocialPill>
+          <Email class="size-4 md:size-6"/>
+          diegocalvosoli@gmail.com
+        </SocialPill>
+      </nav>
+    </section>
+
+    <section id="experiencia" class="w-full mx-auto lg:w-[740px]">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7"/>
+        Experiencia
+      </h2>
+      <Experience />
+    </section>
+
+    <section id="experiencia" class="w-full mx-auto lg:w-[740px]">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-7"/>
+        Proyectos
+      </h2>
+      <Experience />
+    </section>
+  </main>
+</Layout>
