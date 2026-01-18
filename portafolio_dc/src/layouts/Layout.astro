@@ -9,16 +9,16 @@ import "@fontsource-variable/onest"
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
     <meta name="description" content="Contrata a Diego Calvo para crear tu aplicación web. Desarrollador y programador web especializado en crear aplicaciones únicas"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portafolio de Diego Calvo - Desarrollador y Programador Web</title>
 	</head>
 	<body>
     <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
-    <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+    <div class="fixed inset-0 z-[-2] min-h-screen min-w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
     </div>
 
     <Header />
@@ -29,19 +29,20 @@ import "@fontsource-variable/onest"
 
 <style is:global>
   :root{
-    color-scheme: light dark
+    color-scheme: dark;
   }
 
 	html{
     font-family: "Onest", system-ui, sans-serif;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   
 	body {
     background: #050505;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh
+    min-height: 100vh,
+    margin: 0;
 	}
 
   @media (prefers-reduced-motion: reduce) {
